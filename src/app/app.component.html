@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  
+<textarea class="form-control" [(ngModel)]="content" ></textarea>
+
+
+<div style="text-align:center">
+<button class="mt-2 btn btn-primary" (click)="filter()">Lọc trùng Excel</button>
+</div>
+<hr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Link</th>
+        <th scope="col">Kết quả</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataShowTable; let i = index">
+        <td><a target="_blank" rel="noopener noreferrer" href="{{item.url}}">{{item.url}}</a>
+        </td>
+        <td>{{item.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
